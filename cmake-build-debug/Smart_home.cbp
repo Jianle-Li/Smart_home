@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Smart_home"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Smart_home.elf">
+				<Option output="E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Smart_home.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32F103xB"/>
+					<Add directory="E:/stm32/STM32f103C8T6/Smart_home/Core/Inc"/>
+					<Add directory="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc"/>
+					<Add directory="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Device/ST/STM32F1xx/Include"/>
+					<Add directory="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include"/>
+					<Add directory="e:\clion_stm32_windows\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/include/c++/9.3.1"/>
+					<Add directory="e:\clion_stm32_windows\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/include/c++/9.3.1/arm-none-eabi"/>
+					<Add directory="e:\clion_stm32_windows\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/include/c++/9.3.1/backward"/>
+					<Add directory="e:\clion_stm32_windows\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/9.3.1/include"/>
+					<Add directory="e:\clion_stm32_windows\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/9.3.1/include-fixed"/>
+					<Add directory="e:\clion_stm32_windows\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 Smart_home.elf"/>
+					<CompileFile command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Smart_home.elf/fast">
+				<Option output="E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Smart_home.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32F103xB"/>
+					<Add directory="E:/stm32/STM32f103C8T6/Smart_home/Core/Inc"/>
+					<Add directory="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc"/>
+					<Add directory="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Device/ST/STM32F1xx/Include"/>
+					<Add directory="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include"/>
+					<Add directory="e:\clion_stm32_windows\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/include/c++/9.3.1"/>
+					<Add directory="e:\clion_stm32_windows\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/include/c++/9.3.1/arm-none-eabi"/>
+					<Add directory="e:\clion_stm32_windows\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/include/c++/9.3.1/backward"/>
+					<Add directory="e:\clion_stm32_windows\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/9.3.1/include"/>
+					<Add directory="e:\clion_stm32_windows\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/9.3.1/include-fixed"/>
+					<Add directory="e:\clion_stm32_windows\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 Smart_home.elf/fast"/>
+					<CompileFile command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/CLion_STM32_Windows/MinGW/bin/mingw32-make.exe -f &quot;E:/stm32/STM32f103C8T6/Smart_home/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Core/Inc/dht11.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Core/Inc/gpio.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Core/Inc/i2c.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Core/Inc/main.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Core/Inc/oled.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Core/Inc/oledfont.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Core/Inc/stm32f1xx_hal_conf.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Core/Inc/stm32f1xx_it.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Core/Inc/tim.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Core/Src/dht11.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Core/Src/gpio.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Core/Src/i2c.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Core/Src/main.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Core/Src/oled.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Core/Src/stm32f1xx_hal_msp.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Core/Src/stm32f1xx_it.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Core/Src/syscalls.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Core/Src/system_stm32f1xx.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Core/Src/tim.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/cmsis_armcc.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/cmsis_armclang.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/cmsis_compiler.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/cmsis_gcc.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/cmsis_iccarm.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/cmsis_version.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/core_armv8mbl.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/core_armv8mml.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/core_cm0.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/core_cm0plus.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/core_cm1.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/core_cm23.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/core_cm3.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/core_cm33.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/core_cm4.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/core_cm7.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/core_sc000.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/core_sc300.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/mpu_armv7.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/mpu_armv8.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/CMSIS/Include/tz_context.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/STM32F103C8Tx_FLASH.ld">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/startup/startup_stm32f103xb.s">
+			<Option target="Smart_home.elf"/>
+		</Unit>
+		<Unit filename="E:/stm32/STM32f103C8T6/Smart_home/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
