@@ -58,7 +58,7 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 extern uint8_t Data[5];
-//获取Data[]中每个元素十进制下的位数
+//Gets the number of digits in decimal for each element in Data[].
 int getDecimalDigits(uint8_t num)
 {
     int count = 0;
@@ -71,7 +71,27 @@ int getDecimalDigits(uint8_t num)
 
     return count;
 }
-
+//Displays temperature and humidity
+void dht_oled()
+{
+    if(DHT_Read())
+    {
+        OLED_ShowCHinese(0,0,8);//"shi"
+        OLED_ShowCHinese(16,0,10);//"du"
+        OLED_ShowChar(32,0,26+' ',16);//":"
+        OLED_ShowNum(40,0,(unsigned int)Data[0],getDecimalDigits(Data[0]),16);//Humidity values in single digits and tens of digits
+        OLED_ShowChar(40+getDecimalDigits(Data[0])*8,0,5+' ',16);//"%"
+        //printf("H:%.1f%%,T:%.fC\r\n",Data[0]+0.1*Data[1],Data[2]+0.1*Data[3]);
+        OLED_ShowCHinese(0,2,9);//"wen"
+        OLED_ShowCHinese(16,2,10);//"du"
+        OLED_ShowChar(32,2,26+' ',16);//":"
+        OLED_ShowNum(40,2,(unsigned int)Data[2],getDecimalDigits(Data[2]),16);//Temperature values in single digits and tens
+        OLED_ShowChar(40+getDecimalDigits(Data[2])*8,2,14+' ',16);//"."
+        OLED_ShowNum(40+(getDecimalDigits(Data[2])+1)*8,2,(unsigned int)Data[3],getDecimalDigits(Data[3]),16);//The decimal place of the temperature value
+        OLED_ShowChar(40+(getDecimalDigits(Data[2])+getDecimalDigits(Data[3])+1)*8,2,35+' ',16);//"C"
+    }
+    HAL_Delay(50);
+}
 /* USER CODE END 0 */
 
 /**
@@ -81,7 +101,7 @@ int getDecimalDigits(uint8_t num)
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+    uint16_t pwmVal=0;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -104,20 +124,22 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
   MX_TIM1_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
   OLED_Init();
   OLED_Clear();
-  OLED_ShowCHinese(32,0,0);//“毕”
-  OLED_ShowCHinese(48,0,1);//“业”
-  OLED_ShowCHinese(64,0,2);//“设”
-  OLED_ShowCHinese(80,0,3);//“计”
+  OLED_ShowCHinese(32,0,0);//"bi"
+  OLED_ShowCHinese(48,0,1);//"ye"
+  OLED_ShowCHinese(64,0,2);//"she"
+  OLED_ShowCHinese(80,0,3);//"ji"
   OLED_ShowNum(24,2,3120002342,10,16);//"3120002342"
-  OLED_ShowCHinese(32,4,4);//“智”
-  OLED_ShowCHinese(48,4,5);//“能”
-  OLED_ShowCHinese(64,4,6);//“家”
-  OLED_ShowCHinese(80,4,7);//“居”
+  OLED_ShowCHinese(32,4,4);//"zhi"
+  OLED_ShowCHinese(48,4,5);//"neng"
+  OLED_ShowCHinese(64,4,6);//"jia"
+  OLED_ShowCHinese(80,4,7);//"ju"
   HAL_Delay(1000);
   OLED_Clear();
+  HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -125,24 +147,20 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-      if(DHT_Read())
-      {
-          OLED_ShowCHinese(0,0,8);//"湿"
-          OLED_ShowCHinese(16,0,10);//“度”
-          OLED_ShowChar(32,0,26+' ',16);//":"
-          OLED_ShowNum(40,0,(unsigned int)Data[0],getDecimalDigits(Data[0]),16);//湿度值个位十位
-          OLED_ShowChar(40+getDecimalDigits(Data[0])*8,0,5+' ',16);//"%"
-          //printf("H:%.1f%%,T:%.fC\r\n",Data[0]+0.1*Data[1],Data[2]+0.1*Data[3]);
-          OLED_ShowCHinese(0,2,9);//"温"
-          OLED_ShowCHinese(16,2,10);//“度”
-          OLED_ShowChar(32,2,26+' ',16);//":"
-          OLED_ShowNum(40,2,(unsigned int)Data[2],getDecimalDigits(Data[2]),16);//温度值个位十位
-          OLED_ShowChar(40+getDecimalDigits(Data[2])*8,2,14+' ',16);//"."
-          OLED_ShowNum(40+(getDecimalDigits(Data[2])+1)*8,2,(unsigned int)Data[3],getDecimalDigits(Data[3]),16);//温度值小数位
-          OLED_ShowChar(40+(getDecimalDigits(Data[2])+getDecimalDigits(Data[3])+1)*8,2,35+' ',16);//"C"
-      }
-      HAL_Delay(50);
+
     /* USER CODE BEGIN 3 */
+    dht_oled();
+    while (pwmVal<1000){
+        pwmVal++;
+        __HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_1,pwmVal);
+        HAL_Delay(5);
+    }
+    while(pwmVal){
+        pwmVal--;
+        __HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_1,pwmVal);
+        HAL_Delay(5);
+    }
+    HAL_Delay(100);
   }
   /* USER CODE END 3 */
 }

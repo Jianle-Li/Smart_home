@@ -33,3 +33,15 @@ arm-none-eabi-gcc.exe: error: Core/Src/dht11.c: No such file or directory
 温湿度数值显示只有一位
 
 解决：sizeof(Data[0])函数获取的是元素的字节数，故都为1，只显示一位
+
+
+
+##### 2024/1/29
+
+进度：增加呼吸灯
+
+问题：
+
+cubemx生成新代码后，原main.c中的中文注释会变为乱码
+
+解决：Windows默认使用UTF-8编码，而cubemx则使用GBK编码

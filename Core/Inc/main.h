@@ -38,6 +38,7 @@ extern "C" {
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
 int getDecimalDigits(uint8_t num);
+void dht_oled();
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
