@@ -101,7 +101,7 @@ void dht_oled()
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-    uint16_t pwmVal=0;
+
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -126,6 +126,7 @@ int main(void)
   MX_TIM1_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
+  uint16_t pwmVal=500;//The higher the value,the dimmer the headlight
   OLED_Init();
   OLED_Clear();
   OLED_ShowCHinese(32,0,0);//"bi"
@@ -140,6 +141,7 @@ int main(void)
   HAL_Delay(1000);
   OLED_Clear();
   HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_1);
+  //__HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_1,pwmVal);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -149,18 +151,18 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    dht_oled();
-    while (pwmVal<1000){
-        pwmVal++;
-        __HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_1,pwmVal);
-        HAL_Delay(5);
-    }
-    while(pwmVal){
-        pwmVal--;
-        __HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_1,pwmVal);
-        HAL_Delay(5);
-    }
-    HAL_Delay(100);
+      dht_oled();
+      while(pwmVal){
+          pwmVal--;
+          __HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_1,pwmVal);
+          HAL_Delay(5);
+      }
+      while (pwmVal<500){
+          pwmVal++;
+          __HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_1,pwmVal);
+          HAL_Delay(5);
+      }
+      HAL_Delay(100);
   }
   /* USER CODE END 3 */
 }

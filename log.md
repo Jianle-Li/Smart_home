@@ -45,3 +45,13 @@ arm-none-eabi-gcc.exe: error: Core/Src/dht11.c: No such file or directory
 cubemx生成新代码后，原main.c中的中文注释会变为乱码
 
 解决：Windows默认使用UTF-8编码，而cubemx则使用GBK编码
+
+
+
+##### 2024/1/30
+
+进度：调整呼吸灯设置
+
+问题：/
+
+解决：/
